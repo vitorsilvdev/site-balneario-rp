@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regras Oficiais - Balneário RP</title>
+    <style>
+        :root {
+            --cor-principal: #3498db;
+            --cor-fundo: #0f172a;
+            --cor-nav: #161e2e;
+            --cor-card: #1e293b;
+            --cor-texto: #f8fafc;
+            --cor-subtexto: #94a3b8;
+            --cor-alerta: #f1c40f;
+            --cor-proibido: #e74c3c;
+        }
+
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--cor-fundo); color: var(--cor-texto); line-height: 1.6; }
+        header { background: var(--cor-nav); padding: 40px; text-align: center; border-bottom: 3px solid var(--cor-principal); }
+        nav { background: var(--cor-nav); display: flex; justify-content: center; padding: 10px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 20px rgba(0,0,0,0.4); }
+        nav a { color: white; text-decoration: none; padding: 10px 20px; margin: 0 5px; border-radius: 5px; transition: 0.3s; }
+        nav a:hover { background: var(--cor-principal); }
+
+        main { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+        .btn-voltar { display: inline-block; color: var(--cor-principal); text-decoration: none; margin-bottom: 20px; font-weight: bold; }
+
+        .secao-regras { background: var(--cor-card); padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); margin-bottom: 30px; }
+        h2 { color: var(--cor-principal); border-bottom: 2px solid rgba(52, 152, 219, 0.2); padding-bottom: 10px; text-transform: uppercase; }
+
+        .regra-box { background: rgba(255, 255, 255, 0.05); padding: 20px; border-left: 4px solid var(--cor-principal); margin: 15px 0; border-radius: 0 8px 8px 0; }
+        .regra-box.proibido { border-left-color: var(--cor-proibido); }
+        .regra-box.alerta { border-left-color: var(--cor-alerta); }
+        
+        .regra-box strong { color: var(--cor-principal); display: block; font-size: 1.1rem; margin-bottom: 5px; }
+        .regra-box.proibido strong { color: var(--cor-proibido); }
+        .regra-box.alerta strong { color: var(--cor-alerta); }
+
+        footer { text-align: center; padding: 40px; color: var(--cor-subtexto); font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Regras do Balneário RP</h1>
+    <p>Diretrizes atualizadas para a melhor experiência de Roleplay [cite: 3, 4]</p>
+</header>
+
+<nav>
+    <a href="index.html">Início</a>
+    <a href="artigos.html">Artigos</a>
+    <a href="sobre.html">Sobre</a>
+</nav>
+
+<main>
+    <a href="artigos.html" class="btn-voltar">← Voltar para Artigos</a>
+
+    <div class="secao-regras">
+        <h2>Conduta e Combate [cite: 6]</h2>
+        
+        <div class="regra-box proibido">
+            <strong>RDM (Random Deathmatch) [cite: 7]</strong>
+            Consiste em matar ou tentar matar alguém sem um motivo justo para o Roleplay. [cite: 8, 10]
+        </div>
+
+        <div class="regra-box proibido">
+            <strong>VDM (Vehicle Deathmatch) [cite: 44]</strong>
+            É proibido abusar do sistema de atropelamento para tirar vantagem ou perseguir outros jogadores. [cite: 45, 48]
+        </div>
+
+        <div class="regra-box proibido">
+            <strong>RK (Revenge Kill) [cite: 17]</strong>
+            É proibido matar alguém por vingança após ter sido morto por essa pessoa, caso você não tenha sido reanimado pelo SAMU. [cite: 18]
+        </div>
+
+        <div class="regra-box alerta">
+            <strong>Amor à Vida [cite: 32]</strong>
+            Você deve prezar por sua integridade. Se estiver sob mira de arma, é proibido reagir ou fugir de forma irreal. [cite: 33, 36, 37]
+        </div>
+    </div>
+
+    <div class="secao-regras">
+        <h2>Limitações Técnicas [cite: 38, 53]</h2>
+
+        <div class="regra-box">
+            <strong>Meta Gaming (MG) [cite: 25]</strong>
+            É proibido trazer informações de fora do jogo (como Discord ou redes sociais) para dentro do RP. [cite: 26, 29, 30]
+        </div>
+
+        <div class="regra-box">
+            <strong>Power Gaming (PG) [cite: 38]</strong>
+            Realizar ações impossíveis na vida real, como pular de lugares muito altos ou escalar prédios com veículos. [cite: 39, 41, 43]
+        </div>
+
+        <div class="regra-box proibido">
+            <strong>Combat Logging (CL) [cite: 53]</strong>
+            Sair do jogo propositalmente durante momentos importantes, como assaltos, abordagens ou sequestros. [cite: 54, 58, 59, 60]
+        </div>
+    </div>
+
+    <div class="secao-regras">
+        <h2>Corporações [cite: 78]</h2>
+
+        <div class="regra-box">
+            <strong>Polícia Militar (PM) [cite: 79]</strong>
+            Devem atuar com bom senso e não podem cometer crimes. Policiais só entram na favela após a fuga dos bandidos. [cite: 71, 83, 85]
+        </div>
+
+        <div class="regra-box alerta">
+            <strong>SAMU [cite: 89]</strong>
+            Devem esperar o fim de trocas de tiros para reanimar feridos e não podem ser sequestrados enquanto estiverem em turno. [cite: 77, 96, 97]
+        </div>
+    </div>
+
+    <div class="secao-regras">
+        <h2>Ética e Respeito (Dark RP) [cite: 49]</h2>
+        <div class="regra-box proibido">
+            <strong>Proibições Absolutas:</strong>
+            É estritamente proibido assédio, estupro, apologia a ideologias discriminatórias ou ofensas por raça, sexualidade, gênero ou credo. [cite: 50, 51, 52]
+        </div>
+    </div>
+</main>
+
+<footer>
+    &copy; 2025 Balneário RP - Documento sujeito a atualizações constantes [cite: 4, 5]
+</footer>
+
+</body>
+</html>
