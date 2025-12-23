@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutoriais - Balneário RP</title>
+    <style>
+        :root { --cor-principal: #3498db; --cor-fundo: #0f172a; --cor-nav: #161e2e; --cor-texto: #f8fafc; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--cor-fundo); color: var(--cor-texto); display: flex; flex-direction: column; min-height: 100vh; }
+        header { background: var(--cor-nav); padding: 20px; text-align: center; border-bottom: 2px solid var(--cor-principal); }
+        
+        .loading-wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .loading-gif { width: 80px; margin-bottom: 20px; filter: hue-rotate(180deg); }
+        h1 { color: #f1c40f; letter-spacing: 5px; text-transform: uppercase; margin: 0; }
+        p { color: #94a3b8; margin-top: 10px; font-size: 1.2rem; }
+        
+        .btn-voltar { margin-top: 30px; color: var(--cor-principal); text-decoration: none; font-weight: bold; border: 1px solid var(--cor-principal); padding: 10px 20px; border-radius: 5px; transition: 0.3s; }
+        .btn-voltar:hover { background: var(--cor-principal); color: white; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div style="font-weight: bold; color: var(--cor-principal);">BALNEÁRIO RP</div>
+</header>
+
+<div class="loading-wrapper">
+    <img src="https://i.gifer.com/ZZ5H.gif" alt="Carregando" class="loading-gif">
+    <h1>EM BREVE</h1>
+    <p>Estamos preparando os guias oficiais da cidade...</p>
+    <a href="artigos.html" class="btn-voltar">VOLTAR</a>
+</div>
+
+</body>
+</html>
