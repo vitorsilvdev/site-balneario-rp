@@ -5,124 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artigos - Balneário RP</title>
     <style>
-        /* Paleta de Cores baseada na Logo */
         :root {
-            --cor-principal: #3498db;    /* Azul da logo */
-            --cor-fundo: #0f172a;       /* Fundo Escuro */
-            --cor-nav: #161e2e;         /* Menu Escuro */
-            --cor-card: #1e293b;        /* Fundo dos Quadrados */
-            --cor-texto: #f8fafc;       /* Texto quase branco */
-            --cor-subtexto: #94a3b8;    /* Texto cinza claro */
+            --cor-principal: #3498db;
+            --cor-fundo: #0f172a;
+            --cor-nav: #161e2e;
+            --cor-card: #1e293b;
+            --cor-texto: #f8fafc;
+            --cor-subtexto: #94a3b8;
         }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--cor-fundo); color: var(--cor-texto); }
+        header { background: linear-gradient(180deg, var(--cor-nav) 0%, var(--cor-fundo) 100%); padding: 40px; text-align: center; border-bottom: 3px solid var(--cor-principal); }
+        nav { background: var(--cor-nav); display: flex; justify-content: center; padding: 10px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 20px rgba(0,0,0,0.4); }
+        nav a { color: white; text-decoration: none; padding: 10px 20px; margin: 0 5px; border-radius: 5px; transition: 0.3s; }
+        nav a:hover, .ativo { background: var(--cor-principal); font-weight: bold; }
 
-        /* Base */
-        body { 
-            font-family: 'Segoe UI', sans-serif; 
-            margin: 0; 
-            background: var(--cor-fundo); 
-            color: var(--cor-texto); 
-        }
-
-        header { 
-            background: linear-gradient(180deg, var(--cor-nav) 0%, var(--cor-fundo) 100%);
-            color: white; 
-            padding: 40px; 
-            text-align: center; 
-            border-bottom: 3px solid var(--cor-principal);
-        }
-
-        nav { 
-            background: var(--cor-nav); 
-            display: flex; 
-            justify-content: center; 
-            padding: 10px; 
-            position: sticky; 
-            top: 0; 
-            z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-        }
-
-        nav a { 
-            color: white; 
-            text-decoration: none; 
-            padding: 10px 20px; 
-            margin: 0 5px; 
-            border-radius: 5px; 
-            transition: 0.3s; 
-        }
-
-        nav a:hover, .ativo { 
-            background: var(--cor-principal); 
-            box-shadow: 0 0 15px var(--cor-principal);
-            font-weight: bold;
-        }
-
-        /* Título da Seção */
-        .titulo-secao { text-align: center; margin-top: 40px; color: var(--cor-principal); text-transform: uppercase; letter-spacing: 1px; }
-
-        /* Grid de Cards */
-        .grid-artigos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        /* Estilo do Card Clicável Tematizado */
-        .card {
-            background: var(--cor-card);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-            transition: all 0.3s ease;
-            text-decoration: none;
-            color: inherit;
-            display: flex;
-            flex-direction: column;
-            border-top: 6px solid var(--cor-principal);
-            cursor: pointer;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(52, 152, 219, 0.2);
-            border-top-width: 10px;
-        }
-
-        .card h3 { 
-            color: var(--cor-principal); 
-            margin: 15px 0 10px 0; 
-            font-size: 1.4rem;
-        }
-
-        .card p { 
-            color: var(--cor-subtexto); 
-            font-size: 0.95rem; 
-            line-height: 1.5;
-            margin-bottom: 20px;
-        }
-
-        .tag { 
-            background: rgba(52, 152, 219, 0.1); 
-            color: var(--cor-principal); 
-            padding: 5px 12px; 
-            font-size: 0.75rem; 
-            border-radius: 50px; 
-            font-weight: bold; 
-            align-self: flex-start;
-            text-transform: uppercase;
-            border: 1px solid var(--cor-principal);
-        }
-
-        .saiba-mais {
-            margin-top: auto;
-            color: var(--cor-principal);
-            font-weight: bold;
-            font-size: 0.9rem;
-        }
-
+        .grid-artigos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+        .card { background: var(--cor-card); padding: 30px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); transition: 0.3s; text-decoration: none; color: inherit; border-top: 6px solid var(--cor-principal); }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(52, 152, 219, 0.2); }
+        .card h3 { color: var(--cor-principal); margin: 15px 0 10px 0; }
+        .card p { color: var(--cor-subtexto); font-size: 0.95rem; }
         footer { text-align: center; padding: 40px; color: var(--cor-subtexto); }
     </style>
 </head>
@@ -130,7 +31,6 @@
 
 <header>
     <h1>Central de Informações</h1>
-    <p>Tudo o que você precisa saber sobre o Balneário RP</p>
 </header>
 
 <nav>
@@ -139,36 +39,24 @@
     <a href="sobre.html">Sobre</a>
 </nav>
 
-<div class="titulo-secao">
-    <h2>Explore os Guias</h2>
-</div>
-
-<div class="grid-artigos">
+<main class="grid-artigos">
     <a href="regras.html" class="card">
-        <span class="tag">Importante</span>
         <h3>Regras do Servidor</h3>
-        <p>Leia atentamente as diretrizes para evitar punições e garantir um RP de qualidade.</p>
-        <span class="saiba-mais">Ver detalhes →</span>
+        <p>Consulte as normas de RDM, VDM e conduta ética do Balneário.</p>
     </a>
 
-    <a href="sistemas.html" class="card">
-        <span class="tag">Novidade</span>
+    <a href="tutoriais.html" class="card">
         <h3>Tutoriais do Jogo</h3>
-        <p>Tutoriais de como funcionam os empregos, a economia e tudo o que se faz na cidade.</p>
-        <span class="saiba-mais">Ver detalhes →</span>
+        <p>Aprenda sobre os sistemas e comandos da nossa cidade.</p>
     </a>
 
     <a href="https://discord.gg/balneario" target="_blank" class="card" style="border-top-color: #5865F2;">
-        <span class="tag" style="color: #5865F2; background: rgba(88, 101, 242, 0.1); border-color: #5865F2;">Social</span>
         <h3>Nosso Discord</h3>
-        <p>Entre na nossa comunidade oficial para ficar por dentro de todos os anúncios.</p>
-        <span class="saiba-mais" style="color: #5865F2;">Entrar agora →</span>
+        <p>Entre para suporte via ticket e anúncios oficiais.</p>
     </a>
-</div>
+</main>
 
-<footer>
-    &copy; 2025 Balneário RP - Informativo Oficial.
-</footer>
+<footer>&copy; 2025 Balneário RP</footer>
 
 </body>
 </html>
